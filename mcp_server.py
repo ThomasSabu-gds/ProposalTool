@@ -138,9 +138,8 @@ def list_runs() -> dict[str, Any]:
     return {"runs": items}
 
 
-if __name__ == "__main__": 
-    # this is a new comment
-    port = int(os.environ.get("PORT", 8000))
-    mcp.run(transport="streamable-http", port=port)
-# this is a comment
-# this is new comment
+
+if __name__ == "__main__":
+    mcp.run(transport="streamable-http")
+
+
