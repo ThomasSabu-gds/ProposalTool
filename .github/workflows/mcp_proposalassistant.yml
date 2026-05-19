@@ -63,4 +63,4 @@ jobs:
         with:
           app-name: 'ProposalAssistant'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_43C2F15D54ED4E75881BA5C12238AEA5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_294C07A2B46F4AD8A77F50F0473B4489 }}
