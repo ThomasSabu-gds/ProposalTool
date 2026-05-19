@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Assist | EY</title>
+    <link rel="icon" type="image/png" href="/static/ey-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #FFE600;
+            --yellow-dark: #E6CF00;
+            --black: #2E2E38;
+            --gray-900: #333340;
+            --gray-800: #3D3D4E;
+            --gray-700: #585868;
+            --gray-500: #8B8B96;
+            --gray-300: #C4C4CD;
+            --gray-200: #D8D8E0;
+            --gray-100: #EBEBEF;
+            --gray-50: #F6F6FA;
+            --white: #FFFFFF;
+            --green: #168736;
+            --red: #B9251C;
+            --max-w: 1140px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--gray-50); color: var(--black);
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh; display: flex; flex-direction: column;
+        }
+
+        /* ===== HEADER ===== */
+        .top-header {
+            background: var(--white); height: 56px; display: flex; align-items: center;
+            padding: 0 40px; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100;
+        }
+        .top-header-inner {
+            display: flex; align-items: center; gap: 14px;
+            width: 100%; max-width: var(--max-w); margin: 0 auto;
+        }
+        .ey-logo-box {
+            width: 34px; height: 34px; background: var(--black); display: flex;
+            align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .ey-logo-box img { height: 26px; }
+        .ey-logo-box span { color: var(--yellow); font-weight: 800; font-size: 16px; }
+        .app-title { font-size: 15px; font-weight: 600; color: var(--black); letter-spacing: -0.2px; }
+
+        /* ===== HERO ===== */
+        .hero-banner {
+            background: linear-gradient(135deg, #1A1A2E 0%, #2D1B4E 40%, #4A1942 65%, #6B1D3A 85%, #8B1A30 100%);
+            padding: 0 40px; position: relative; overflow: hidden;
+        }
+        .hero-banner::before {
+            content: ''; position: absolute; top: -40%; right: -5%;
+            width: 460px; height: 460px;
+            background: radial-gradient(circle, rgba(139,92,246,0.22) 0%, transparent 65%);
+            border-radius: 50%;
+        }
+        .hero-inner {
+            max-width: var(--max-w); margin: 0 auto;
+            padding: 36px 0 32px; position: relative; z-index: 1;
+        }
+        .hero-inner h1 {
+            font-size: 30px; font-weight: 700; color: var(--white);
+            margin-bottom: 8px; letter-spacing: -0.4px; line-height: 1.2;
+        }
+        .hero-inner p {
+            font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.55;
+            font-weight: 400; max-width: 600px;
+        }
+
+        /* ===== MAIN LAYOUT ===== */
+        .main-content {
+            flex: 1; padding: 32px 40px 56px;
+            max-width: var(--max-w); margin: 0 auto; width: 100%;
+        }
+
+        /* ===== SECTION LABEL ===== */
+        .section-label-row {
+            display: flex; align-items: center; justify-content: space-between;
+            border-bottom: 2px solid var(--gray-200); margin-bottom: 22px;
+        }
+        .section-label {
+            font-size: 13px; font-weight: 700; color: var(--black);
+            padding-bottom: 10px; border-bottom: 3px solid var(--yellow);
+            margin-bottom: -2px; text-transform: uppercase; letter-spacing: 0.4px;
+        }
+
+        /* ===== CARD ===== */
+        .card {
+            background: var(--white); border: 1px solid var(--gray-200);
+            border-radius: 6px; padding: 28px 32px; margin-bottom: 20px;
+        }
+        .card-top {
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--gray-100);
+        }
+        .card-icon {
+            width: 36px; height: 36px; border-radius: 4px;
+            background: var(--yellow); color: var(--black);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; flex-shrink: 0; font-weight: 700;
+        }
+        .card-top-text h2 { font-size: 14px; font-weight: 700; color: var(--black); }
+        .card-top-text p { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+
+        /* ===== FORM ===== */
+        .field { margin-bottom: 22px; }
+        .field-label {
+            display: block; font-size: 11px; font-weight: 700; color: var(--gray-700);
+            margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.4px;
+        }
+        .field-hint { font-size: 11px; color: var(--gray-500); margin-bottom: 8px; }
+        input[type="text"], textarea {
+            width: 100%; padding: 10px 14px; border: 1px solid var(--gray-200);
+            border-radius: 4px; font-size: 14px; font-family: inherit;
+            color: var(--black); background: var(--white); transition: border-color 0.15s;
+        }
+        input[type="text"]:focus, textarea:focus {
+            outline: none; border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(255,230,0,0.12);
+        }
+        textarea { resize: vertical; min-height: 90px; line-height: 1.55; }
+
+        /* ===== FILE UPLOAD ===== */
+        .upload-area {
+            border: 2px dashed var(--gray-300); border-radius: 6px; padding: 26px; text-align: center;
+            cursor: pointer; position: relative; background: var(--gray-50); transition: all 0.2s;
+        }
+        .upload-area:hover { border-color: var(--yellow); background: rgba(255,230,0,0.04); }
+        .upload-area.has-file { border-color: var(--green); border-style: solid; background: #f4faf5; }
+        .upload-area input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+        .upload-icon-box {
+            width: 40px; height: 40px; border-radius: 6px; margin: 0 auto 8px;
+            background: var(--black); display: flex; align-items: center; justify-content: center;
+        }
+        .upload-icon-box span { font-size: 18px; color: var(--yellow); }
+        .upload-text { font-size: 13px; color: var(--black); font-weight: 600; }
+        .upload-hint { font-size: 11px; color: var(--gray-500); margin-top: 3px; }
+        .upload-file { font-size: 13px; font-weight: 600; color: var(--green); margin-top: 6px; }
+
+        /* ===== TEMPLATE GALLERY ===== */
+        .gallery-status { font-size: 12px; color: var(--gray-500); padding: 28px 0; text-align: center; }
+        .gallery-status .spinner-sm {
+            display: inline-block; width: 12px; height: 12px;
+            border: 2px solid var(--gray-200); border-top-color: var(--yellow); border-radius: 50%;
+            animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 6px;
+        }
+        .template-gallery {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+        }
+        .template-card {
+            position: relative; border: 2px solid var(--gray-200); border-radius: 8px;
+            background: var(--white); cursor: pointer; overflow: hidden; transition: all 0.18s;
+            display: flex; flex-direction: column;
+        }
+        .template-card:hover {
+            border-color: var(--gray-300); transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+        .template-card.selected {
+            border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(255,230,0,0.25);
+        }
+        .template-card .thumb-wrap {
+            position: relative; width: 100%; aspect-ratio: 16 / 9;
+            background: var(--gray-100); overflow: hidden;
+        }
+        .template-card img.thumb {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+        }
+        .template-card .thumb-fallback {
+            width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px; color: var(--gray-500);
+        }
+        .template-card .check-badge {
+            position: absolute; top: 8px; right: 8px;
+            width: 24px; height: 24px; border-radius: 50%;
+            background: var(--yellow); color: var(--black);
+            font-weight: 800; font-size: 13px;
+            display: none; align-items: center; justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        .template-card.selected .check-badge { display: flex; }
+        .template-card .sector-chip {
+            position: absolute; top: 8px; left: 8px;
+            font-size: 10px; font-weight: 700; letter-spacing: 0.3px;
+            background: rgba(46,46,56,0.78); color: var(--white);
+            padding: 3px 8px; border-radius: 3px;
+        }
+        .template-card .meta {
+            padding: 12px 14px;
+            border-top: 1px solid var(--gray-100);
+        }
+        .template-card .t-label {
+            font-size: 13px; font-weight: 600; color: var(--black);
+            line-height: 1.35;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .template-card .t-slides {
+            font-size: 11px; color: var(--gray-500); margin-top: 4px;
+        }
+
+        /* ===== LAYOUT PREVIEW PANEL ===== */
+        .layouts-panel {
+            margin-top: 18px; padding: 18px; border: 1px solid var(--gray-200);
+            border-radius: 8px; background: var(--gray-50);
+            display: none;
+        }
+        .layouts-panel.active { display: block; animation: fadeIn 0.25s; }
+        .layouts-panel-head {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .layouts-panel-head h4 {
+            font-size: 12px; font-weight: 700; color: var(--gray-700);
+            text-transform: uppercase; letter-spacing: 0.4px;
+        }
+        .layouts-panel-head .selected-name {
+            font-size: 12px; color: var(--gray-500); font-weight: 500;
+        }
+        .layouts-strip {
+            display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px;
+            scrollbar-width: thin;
+        }
+        .layouts-strip::-webkit-scrollbar { height: 6px; }
+        .layouts-strip::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 3px; }
+        .layout-tile {
+            flex: 0 0 auto; width: 200px;
+            background: var(--white); border: 1px solid var(--gray-200);
+            border-radius: 6px; overflow: hidden;
+            display: flex; flex-direction: column;
+        }
+        .layout-tile .l-thumb-wrap {
+            width: 100%; aspect-ratio: 16 / 9; background: var(--gray-100);
+        }
+        .layout-tile .l-thumb-wrap img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+        }
+        .layout-tile .l-name {
+            font-size: 11px; font-weight: 600; color: var(--black);
+            padding: 8px 10px; border-top: 1px solid var(--gray-100);
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .layouts-loading {
+            font-size: 12px; color: var(--gray-500); padding: 18px 0; text-align: center;
+        }
+        .layouts-loading .spinner-sm {
+            display: inline-block; width: 12px; height: 12px;
+            border: 2px solid var(--gray-200); border-top-color: var(--yellow); border-radius: 50%;
+            animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 6px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+            padding: 12px 24px; border: none; border-radius: 4px; font-size: 13px; font-weight: 600;
+            cursor: pointer; transition: all 0.15s; font-family: inherit; letter-spacing: 0.2px;
+        }
+        .btn-primary { background: var(--black); color: var(--yellow); width: 100%; font-size: 14px; }
+        .btn-primary:hover { background: var(--gray-900); }
+        .btn-primary:disabled { background: var(--gray-300); color: var(--gray-500); cursor: default; }
+        .btn-yellow { background: var(--yellow); color: var(--black); font-weight: 700; }
+        .btn-yellow:hover { background: var(--yellow-dark); }
+        .btn-gray { background: var(--gray-100); color: var(--gray-700); border: 1px solid var(--gray-200); }
+        .btn-gray:hover { background: var(--gray-200); }
+        .actions { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+
+        /* ===== PROGRESS ===== */
+        .progress-section { display: none; }
+        .progress-section.active { display: block; animation: fadeIn 0.3s; }
+        .steps { display: flex; margin-bottom: 24px; }
+        .step { flex: 1; text-align: center; position: relative; padding: 14px 0; }
+        .step-dot {
+            width: 32px; height: 32px; border-radius: 50%; background: var(--gray-200); color: var(--gray-500);
+            font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 6px; transition: all 0.25s; position: relative; z-index: 1;
+        }
+        .step-text { font-size: 10px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.4px; }
+        .step::after { content: ''; position: absolute; top: 29px; left: 50%; width: 100%; height: 2px; background: var(--gray-200); z-index: 0; }
+        .step:last-child::after { display: none; }
+        .step.active .step-dot { background: var(--yellow); color: var(--black); box-shadow: 0 0 0 3px rgba(255,230,0,0.2); }
+        .step.active .step-text { color: var(--black); font-weight: 700; }
+        .step.done .step-dot { background: var(--green); color: var(--white); }
+        .step.done .step-text { color: var(--green); }
+        .step.done::after, .step.active::after { background: var(--green); }
+        .status-msg { text-align: center; font-size: 14px; color: var(--gray-700); padding: 16px 0; }
+        .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--gray-200); border-top-color: var(--yellow); border-radius: 50%; animation: spin 0.6s linear infinite; margin-right: 6px; vertical-align: middle; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ===== RESULTS ===== */
+        .result-section { display: none; }
+        .result-section.active { display: block; animation: fadeIn 0.3s; }
+        .qa-bar {
+            display: flex; align-items: center; gap: 16px; padding: 18px 20px;
+            background: var(--gray-50); border-radius: 6px; margin-bottom: 20px;
+            border-left: 4px solid var(--yellow);
+        }
+        .qa-ring {
+            width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 18px; font-weight: 800; flex-shrink: 0; background: var(--white);
+        }
+        .qa-ring.pass { border: 3px solid var(--green); color: var(--green); }
+        .qa-ring.fail { border: 3px solid var(--red); color: var(--red); }
+        .qa-info h3 { font-size: 14px; font-weight: 600; color: var(--black); }
+        .qa-info p { font-size: 12px; color: var(--gray-500); margin-top: 2px; line-height: 1.4; }
+        .slides-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+        .slides-header h3 { font-size: 11px; font-weight: 700; color: var(--gray-700); text-transform: uppercase; letter-spacing: 0.3px; }
+        .slides-badge { font-size: 11px; font-weight: 700; background: var(--yellow); color: var(--black); padding: 2px 10px; border-radius: 2px; }
+        .slides-list { border: 1px solid var(--gray-200); border-radius: 6px; max-height: 360px; overflow-y: auto; }
+        .slide-item {
+            display: flex; align-items: center; gap: 12px; padding: 10px 16px;
+            border-bottom: 1px solid var(--gray-100); transition: background 0.1s;
+        }
+        .slide-item:last-child { border-bottom: none; }
+        .slide-item:hover { background: var(--gray-50); }
+        .s-num {
+            width: 28px; height: 28px; background: var(--gray-800); color: var(--yellow); border-radius: 4px;
+            display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0;
+        }
+        .s-title { font-size: 13px; font-weight: 500; color: var(--black); }
+        .s-type { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-500); background: var(--gray-100); padding: 3px 8px; border-radius: 2px; margin-left: auto; flex-shrink: 0; }
+        .customize-area { display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--gray-100); }
+        .customize-area.active { display: block; }
+
+        .error-bar {
+            background: #fef2f2; color: var(--red); padding: 12px 16px; border-radius: 4px;
+            font-size: 13px; font-weight: 500; display: none; margin-bottom: 14px;
+            border-left: 3px solid var(--red);
+        }
+        .error-bar.active { display: block; }
+
+        /* ===== FOOTER ===== */
+        .footer-disclaimer {
+            background: var(--white); border-top: 1px solid var(--gray-200);
+            padding: 12px 40px; font-size: 11px; color: var(--gray-500); line-height: 1.5;
+            margin-top: auto; text-align: center;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .top-header, .main-content, .footer-disclaimer { padding-left: 20px; padding-right: 20px; }
+            .hero-banner { padding: 0 20px; }
+            .hero-inner { padding: 28px 0; }
+            .hero-inner h1 { font-size: 24px; }
+            .hero-inner p { font-size: 13px; }
+            .card { padding: 22px 20px; }
+            .template-gallery { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="top-header">
+        <div class="top-header-inner">
+            <div class="ey-logo-box">
+                <img src="/static/ey-logo.png" alt="EY" onerror="this.style.display='none';this.parentElement.innerHTML='<span>EY</span>'" />
+            </div>
+            <span class="app-title">Proposal Assist</span>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero-banner">
+        <div class="hero-inner">
+            <h1>Proposal Assist</h1>
+            <p>AI-powered proposal generation with consistency, efficiency, and improved quality.</p>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-content">
+        <div class="error-bar" id="errorBanner"></div>
+
+        <div class="section-label-row">
+            <span class="section-label">Generate Proposal</span>
+        </div>
+
+        <div id="formSection">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-icon">&#9670;</div>
+                    <div class="card-top-text">
+                        <h2>RFP &amp; Template</h2>
+                        <p>Upload the RFP, pick a template, and describe what you need</p>
+                    </div>
+                </div>
+
+                <form id="generateForm">
+                    <div class="field">
+                        <label class="field-label">RFP Document</label>
+                        <div class="field-hint">Supported formats: PDF, DOCX, PPTX, TXT (max 50 MB)</div>
+                        <div class="upload-area" id="fileUploadArea">
+                            <input type="file" id="rfpFile" accept=".pdf,.docx,.pptx,.txt" />
+                            <div class="upload-icon-box"><span>&#8682;</span></div>
+                            <div class="upload-text">Click or drag to upload</div>
+                            <div class="upload-hint">PDF, DOCX, PPTX, TXT</div>
+                            <div class="upload-file" id="fileName"></div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="field-label">Choose Template</label>
+                        <div class="field-hint">Pick the visual style that best matches the proposal you want</div>
+                        <input type="hidden" id="templateSelect" name="templateSelect" />
+                        <div id="galleryStatus" class="gallery-status">
+                            <span class="spinner-sm"></span> Loading templates&hellip;
+                        </div>
+                        <div class="template-gallery" id="templateGallery" style="display:none;"></div>
+
+                        <div class="layouts-panel" id="layoutsPanel">
+                            <div class="layouts-panel-head">
+                                <h4>Master Layouts</h4>
+                                <span class="selected-name" id="layoutsTitle"></span>
+                            </div>
+                            <div id="layoutsBody"></div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="field-label">Instructions</label>
+                        <div class="field-hint">Tone, focus areas, slide count, key themes&hellip;</div>
+                        <textarea id="userPrompt" placeholder="e.g., Focus on digital transformation, emphasize cloud migration, max 15 slides."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="generateBtn">Generate Proposal</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="progress-section" id="progressSection">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-icon">&#9881;</div>
+                    <div class="card-top-text">
+                        <h2>Processing Pipeline</h2>
+                        <p>Your proposal is being generated by our AI agents</p>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step" id="step1"><div class="step-dot">1</div><div class="step-text">Analyze</div></div>
+                    <div class="step" id="step2"><div class="step-dot">2</div><div class="step-text">Compose</div></div>
+                    <div class="step" id="step3"><div class="step-dot">3</div><div class="step-text">Format</div></div>
+                    <div class="step" id="step4"><div class="step-dot">4</div><div class="step-text">QA</div></div>
+                    <div class="step" id="step5"><div class="step-dot">5</div><div class="step-text">Build</div></div>
+                </div>
+                <div class="status-msg" id="statusMessage"><span class="spinner"></span> Uploading RFP and starting analysis...</div>
+            </div>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-icon">&#10003;</div>
+                    <div class="card-top-text">
+                        <h2>Proposal Complete</h2>
+                        <p>Your proposal has been generated and is ready for download</p>
+                    </div>
+                </div>
+
+                <div class="qa-bar" id="qaHeader">
+                    <div class="qa-ring pass" id="qaScore">--</div>
+                    <div class="qa-info">
+                        <h3 id="qaVerdict">Quality Assessment</h3>
+                        <p id="qaMessage"></p>
+                    </div>
+                </div>
+
+                <div class="slides-header">
+                    <h3>Slide Outline</h3>
+                    <span class="slides-badge"><span id="slideCount">0</span> slides</span>
+                </div>
+                <div class="slides-list" id="slidesPreview"></div>
+
+                <div class="actions">
+                    <button class="btn btn-yellow" id="downloadBtn" onclick="downloadProposal()">&#8595; Download PPTX</button>
+                    <button class="btn btn-gray" onclick="toggleCustomize()">Customize</button>
+                    <button class="btn btn-gray" onclick="startOver()">New Proposal</button>
+                </div>
+
+                <div class="customize-area" id="customizeSection">
+                    <div class="field">
+                        <label class="field-label">Customization Instructions</label>
+                        <div class="field-hint">e.g., "Remove slide 4", "Make it shorter", "Add a slide about cybersecurity"</div>
+                        <textarea id="customizeInput" placeholder="Describe what changes you want..."></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="customizeProposal()">Apply Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-disclaimer">
+        &copy; 2026 EY &mdash; Proposal Assist &middot; Internal Use Only
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let currentProposalId = null;
+        let selectedTemplate = "";
+
+        const fileInput = document.getElementById('rfpFile');
+        const fileUploadArea = document.getElementById('fileUploadArea');
+        const fileName = document.getElementById('fileName');
+        const templateGallery = document.getElementById('templateGallery');
+        const galleryStatus = document.getElementById('galleryStatus');
+        const hiddenTemplate = document.getElementById('templateSelect');
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                fileName.textContent = fileInput.files[0].name;
+                fileUploadArea.classList.add('has-file');
+            }
+        });
+
+        // ===== Template gallery =====
+        function renderGallery(items) {
+            templateGallery.innerHTML = "";
+            items.forEach((tpl, idx) => {
+                const card = document.createElement('div');
+                card.className = 'template-card';
+                card.dataset.name = tpl.name;
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('aria-label', `Select template: ${tpl.label}`);
+
+                const thumbWrap = document.createElement('div');
+                thumbWrap.className = 'thumb-wrap';
+
+                const sectorChip = document.createElement('div');
+                sectorChip.className = 'sector-chip';
+                sectorChip.textContent = tpl.sector || 'Template';
+                thumbWrap.appendChild(sectorChip);
+
+                const checkBadge = document.createElement('div');
+                checkBadge.className = 'check-badge';
+                checkBadge.textContent = '✓';
+                thumbWrap.appendChild(checkBadge);
+
+                const img = document.createElement('img');
+                img.className = 'thumb';
+                img.alt = tpl.label;
+                img.loading = 'lazy';
+                img.src = tpl.preview_url;
+                img.onerror = () => {
+                    img.remove();
+                    const fb = document.createElement('div');
+                    fb.className = 'thumb-fallback';
+                    fb.textContent = 'Preview unavailable';
+                    thumbWrap.appendChild(fb);
+                };
+                thumbWrap.appendChild(img);
+
+                const meta = document.createElement('div');
+                meta.className = 'meta';
+                const lbl = document.createElement('div');
+                lbl.className = 't-label';
+                lbl.textContent = tpl.label;
+                const sub = document.createElement('div');
+                sub.className = 't-slides';
+                sub.textContent = `${tpl.slide_count || 0} slides`;
+                meta.appendChild(lbl);
+                meta.appendChild(sub);
+
+                card.appendChild(thumbWrap);
+                card.appendChild(meta);
+
+                const choose = () => selectTemplate(tpl.name);
+                card.addEventListener('click', choose);
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(); }
+                });
+
+                templateGallery.appendChild(card);
+            });
+
+            // Auto-select first if exactly one
+            if (items.length === 1) selectTemplate(items[0].name);
+        }
+
+        const layoutsPanel = document.getElementById('layoutsPanel');
+        const layoutsBody = document.getElementById('layoutsBody');
+        const layoutsTitle = document.getElementById('layoutsTitle');
+        const layoutsCache = {};
+
+        function selectTemplate(name) {
+            selectedTemplate = name;
+            hiddenTemplate.value = name;
+            document.querySelectorAll('.template-card').forEach(c => {
+                c.classList.toggle('selected', c.dataset.name === name);
+            });
+            showLayoutPreviews(name);
+        }
+
+        async function showLayoutPreviews(name) {
+            if (!name) {
+                layoutsPanel.classList.remove('active');
+                return;
+            }
+            layoutsTitle.textContent = name.replace(/\.pptx$/i, '');
+            layoutsPanel.classList.add('active');
+
+            if (layoutsCache[name]) {
+                renderLayoutStrip(layoutsCache[name]);
+                return;
+            }
+
+            layoutsBody.innerHTML = '<div class="layouts-loading"><span class="spinner-sm"></span> Rendering master layouts&hellip;</div>';
+            try {
+                const resp = await fetch(`${API_BASE}/templates/layouts/${encodeURIComponent(name)}`);
+                if (!resp.ok) throw new Error('layouts endpoint failed');
+                const data = await resp.json();
+                const layouts = data.layouts || [];
+                layoutsCache[name] = layouts;
+                renderLayoutStrip(layouts);
+            } catch (e) {
+                layoutsBody.innerHTML = '<div class="layouts-loading">Could not render layout previews.</div>';
+            }
+        }
+
+        function renderLayoutStrip(layouts) {
+            if (!layouts.length) {
+                layoutsBody.innerHTML = '<div class="layouts-loading">No master layouts available.</div>';
+                return;
+            }
+            const strip = document.createElement('div');
+            strip.className = 'layouts-strip';
+            layouts.forEach(l => {
+                const tile = document.createElement('div');
+                tile.className = 'layout-tile';
+
+                const wrap = document.createElement('div');
+                wrap.className = 'l-thumb-wrap';
+                const img = document.createElement('img');
+                img.alt = l.name; img.loading = 'lazy'; img.src = l.preview_url;
+                img.onerror = () => { wrap.innerHTML = '<div class="thumb-fallback" style="height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#8B8B96">no preview</div>'; };
+                wrap.appendChild(img);
+
+                const lbl = document.createElement('div');
+                lbl.className = 'l-name';
+                lbl.textContent = l.name;
+                lbl.title = l.name;
+
+                tile.appendChild(wrap);
+                tile.appendChild(lbl);
+                strip.appendChild(tile);
+            });
+            layoutsBody.innerHTML = '';
+            layoutsBody.appendChild(strip);
+        }
+
+        (async function loadTemplates() {
+            try {
+                const resp = await fetch(`${API_BASE}/templates`);
+                const data = await resp.json();
+                const items = data.templates || [];
+                if (!items.length) {
+                    galleryStatus.innerHTML = 'No templates available in the datalake.';
+                    return;
+                }
+                galleryStatus.style.display = 'none';
+                templateGallery.style.display = '';
+                renderGallery(items);
+            } catch(e) {
+                console.error('Failed to load templates', e);
+                galleryStatus.innerHTML = 'Failed to load templates. Please refresh.';
+            }
+        })();
+
+        // ===== Form submission =====
+        document.getElementById('generateForm').addEventListener('submit', async (e) => {
+            e.preventDefault(); hideError();
+            const file = fileInput.files[0];
+            const prompt = document.getElementById('userPrompt').value.trim();
+            if (!file) { showError('Please upload an RFP document.'); return; }
+            if (!selectedTemplate) { showError('Please pick a template from the gallery.'); return; }
+            if (!prompt) { showError('Please enter your instructions.'); return; }
+
+            const formData = new FormData();
+            formData.append('rfp_file', file);
+            formData.append('template_name', selectedTemplate);
+            formData.append('user_prompt', prompt);
+
+            showProgress(); simulateSteps();
+            try {
+                const response = await fetch(`${API_BASE}/generate`, { method: 'POST', body: formData });
+                if (!response.ok) { const err = await response.json(); throw new Error(err.detail || 'Generation failed'); }
+                const data = await response.json(); completeSteps();
+                setTimeout(() => showResult(data), 500);
+            } catch (err) {
+                showError(err.message); showGenerateForm();
+            }
+        });
+
+        function simulateSteps() {
+            const delays = [0,8000,25000,45000,65000], steps = ['step1','step2','step3','step4','step5'];
+            const msgs = [
+                'Analyzing your RFP document...',
+                'Searching past proposals and generating content...',
+                'Formatting slides and applying design...',
+                'Running quality and compliance checks...',
+                'Selecting template and building PPTX file...'
+            ];
+            steps.forEach((id,i) => { setTimeout(() => {
+                if (i > 0) { document.getElementById(steps[i-1]).classList.remove('active'); document.getElementById(steps[i-1]).classList.add('done'); }
+                document.getElementById(id).classList.add('active');
+                document.getElementById('statusMessage').innerHTML = `<span class="spinner"></span> ${msgs[i]}`;
+            }, delays[i]); });
+        }
+
+        function completeSteps() {
+            ['step1','step2','step3','step4','step5'].forEach(id => {
+                const el = document.getElementById(id); el.classList.remove('active'); el.classList.add('done');
+            });
+            document.getElementById('statusMessage').textContent = 'Complete';
+        }
+
+        function showResult(data) {
+            currentProposalId = data.proposal_id;
+            document.getElementById('progressSection').classList.remove('active');
+            document.getElementById('resultSection').classList.add('active');
+            if (data.qa_report) {
+                const score = data.qa_report.overall_score || 0, el = document.getElementById('qaScore');
+                el.textContent = score; el.className = `qa-ring ${score >= 75 ? 'pass' : 'fail'}`;
+                document.getElementById('qaVerdict').textContent = data.qa_report.verdict || `Score: ${score}/100`;
+            }
+            document.getElementById('qaMessage').textContent = data.message || '';
+            const slides = data.proposal?.slides || [];
+            document.getElementById('slideCount').textContent = slides.length;
+            document.getElementById('slidesPreview').innerHTML = slides.map(s =>
+                `<div class="slide-item"><div class="s-num">${s.slide_number}</div><div class="s-title">${escapeHtml(s.title)}</div><div class="s-type">${escapeHtml(s.slide_type)}</div></div>`
+            ).join('');
+        }
+
+        function downloadProposal() {
+            if (currentProposalId) window.open(`${API_BASE}/download/${currentProposalId}`, '_blank');
+        }
+
+        function toggleCustomize() { document.getElementById('customizeSection').classList.toggle('active'); }
+
+        async function customizeProposal() {
+            const instructions = document.getElementById('customizeInput').value.trim();
+            if (!instructions) { showError('Please enter customization instructions.'); return; }
+            hideError();
+            document.getElementById('resultSection').classList.remove('active'); showProgress();
+            document.getElementById('statusMessage').innerHTML = '<span class="spinner"></span> Applying customizations...';
+            ['step1','step2','step3','step4','step5'].forEach(id => { document.getElementById(id).className = 'step'; });
+            document.getElementById('step3').classList.add('active');
+            try {
+                const response = await fetch(`${API_BASE}/customize`, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ proposal_id: currentProposalId, instructions })
+                });
+                if (!response.ok) { const err = await response.json(); throw new Error(err.detail || 'Customization failed'); }
+                const data = await response.json(); completeSteps();
+                setTimeout(() => showResult(data), 500);
+            } catch (err) {
+                showError(err.message);
+                document.getElementById('resultSection').classList.add('active');
+                document.getElementById('progressSection').classList.remove('active');
+            }
+        }
+
+        function startOver() {
+            currentProposalId = null;
+            document.getElementById('resultSection').classList.remove('active');
+            document.getElementById('customizeSection').classList.remove('active');
+            showGenerateForm();
+            document.getElementById('generateForm').reset();
+            fileName.textContent = ''; fileUploadArea.classList.remove('has-file');
+            selectedTemplate = ""; hiddenTemplate.value = "";
+            document.querySelectorAll('.template-card').forEach(c => c.classList.remove('selected'));
+            layoutsPanel.classList.remove('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showProgress() {
+            document.getElementById('formSection').style.display = 'none';
+            document.getElementById('resultSection').classList.remove('active');
+            document.getElementById('progressSection').classList.add('active');
+            ['step1','step2','step3','step4','step5'].forEach(id => { document.getElementById(id).className = 'step'; });
+        }
+
+        function showGenerateForm() {
+            document.getElementById('formSection').style.display = '';
+            document.getElementById('progressSection').classList.remove('active');
+        }
+
+        function escapeHtml(s) {
+            return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        function showError(msg) {
+            const el = document.getElementById('errorBanner');
+            el.textContent = msg; el.classList.add('active');
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        function hideError() { document.getElementById('errorBanner').classList.remove('active'); }
+    </script>
+</body>
+</html>

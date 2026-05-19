@@ -1,0 +1,40 @@
+[
+  {
+    "chunk_num": 1,
+    "files": [
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\app.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\debug_mapping.json",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log.txt",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log2.txt",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log3.txt",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log4.txt",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\prompt.md",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\requirements.txt",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\sampleinput\\RFP for Onboarding Digital Agency.pdf",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\sampleinput\\sampleRFP 1.pdf",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\config.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\extract_rfp.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\extract_template.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\generate_pptx.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\knowledge_base.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\main.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\map_sections.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\pipeline.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\verifier.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\__init__.py",
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\index.html"
+    ]
+  },
+  {
+    "chunk_num": 2,
+    "files": [
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\ey-logo.png"
+    ]
+  },
+  {
+    "chunk_num": 3,
+    "files": [
+      "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\ey-logo.svg"
+    ]
+  }
+]

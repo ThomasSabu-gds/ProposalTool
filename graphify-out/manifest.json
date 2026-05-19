@@ -1,0 +1,117 @@
+{
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\app.py": {
+    "mtime": 1778849256.7492776,
+    "ast_hash": "d99c702c209cb621c4218b6a478e2846",
+    "semantic_hash": "d99c702c209cb621c4218b6a478e2846"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\debug_mapping.json": {
+    "mtime": 1778848229.7554348,
+    "ast_hash": "694b79068b166f0923376bb509859353",
+    "semantic_hash": "694b79068b166f0923376bb509859353"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\config.py": {
+    "mtime": 1778845822.6794636,
+    "ast_hash": "66290917daa7cde374d6b07ad51ff411",
+    "semantic_hash": "66290917daa7cde374d6b07ad51ff411"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\extract_rfp.py": {
+    "mtime": 1778858635.0576675,
+    "ast_hash": "5c26a7513c1562f82323583931e37561",
+    "semantic_hash": "5c26a7513c1562f82323583931e37561"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\extract_template.py": {
+    "mtime": 1778845874.0774264,
+    "ast_hash": "f9eb4e7b7be3ffa91d2a7227d292da61",
+    "semantic_hash": "f9eb4e7b7be3ffa91d2a7227d292da61"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\generate_pptx.py": {
+    "mtime": 1778859617.0388074,
+    "ast_hash": "3bbb9e4e98c9b84c3f33e592ccffac7d",
+    "semantic_hash": "3bbb9e4e98c9b84c3f33e592ccffac7d"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\knowledge_base.py": {
+    "mtime": 1778859302.0803802,
+    "ast_hash": "d09aa707505c683b314faecaae71823c",
+    "semantic_hash": "d09aa707505c683b314faecaae71823c"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\main.py": {
+    "mtime": 1778845998.761754,
+    "ast_hash": "e1f6ce975b968efc20cc6944ec2a04ed",
+    "semantic_hash": "e1f6ce975b968efc20cc6944ec2a04ed"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\map_sections.py": {
+    "mtime": 1778848932.7663822,
+    "ast_hash": "2e4a192fa8ba39384aa07bfe90bd0ff4",
+    "semantic_hash": "2e4a192fa8ba39384aa07bfe90bd0ff4"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\pipeline.py": {
+    "mtime": 1778864921.543729,
+    "ast_hash": "9f08af2bc3d2caf868020418eae3fde8",
+    "semantic_hash": "9f08af2bc3d2caf868020418eae3fde8"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\verifier.py": {
+    "mtime": 1778864871.7763085,
+    "ast_hash": "aaed1c64071f09c3e4393be6749a3aff",
+    "semantic_hash": "aaed1c64071f09c3e4393be6749a3aff"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\__init__.py": {
+    "mtime": 1778845821.600922,
+    "ast_hash": "68b329da9893e34099c7d8ad5cb9c940",
+    "semantic_hash": "68b329da9893e34099c7d8ad5cb9c940"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\prompt.md": {
+    "mtime": 1778848582.4812517,
+    "ast_hash": "70151b73c5a3b09a78eb7680203602aa",
+    "semantic_hash": "70151b73c5a3b09a78eb7680203602aa"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\requirements.txt": {
+    "mtime": 1778863535.040607,
+    "ast_hash": "316777d94fed990cda1a63b2d6226b59",
+    "semantic_hash": "316777d94fed990cda1a63b2d6226b59"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log.txt": {
+    "mtime": 1778847451.271733,
+    "ast_hash": "a8a5dbdc166f25638b50218a2549276b",
+    "semantic_hash": "a8a5dbdc166f25638b50218a2549276b"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log2.txt": {
+    "mtime": 1778847709.6800258,
+    "ast_hash": "b90ad032f02bf7f763fe91e003b1c5d1",
+    "semantic_hash": "b90ad032f02bf7f763fe91e003b1c5d1"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log3.txt": {
+    "mtime": 1778847919.4958181,
+    "ast_hash": "ef6f82d541a29c0a0178920eeefaa26a",
+    "semantic_hash": "ef6f82d541a29c0a0178920eeefaa26a"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log4.txt": {
+    "mtime": 1778848229.7514167,
+    "ast_hash": "fdeb3ce175e1c5db0daf73beb2433e79",
+    "semantic_hash": "fdeb3ce175e1c5db0daf73beb2433e79"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\index.html": {
+    "mtime": 1778849013.5358326,
+    "ast_hash": "2e38401dba8a019f1c8052ff933df9af",
+    "semantic_hash": "2e38401dba8a019f1c8052ff933df9af"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\sampleinput\\RFP for Onboarding Digital Agency.pdf": {
+    "mtime": 1778856680.5695848,
+    "ast_hash": "85e138b546bf60a4422679aba6e164dc",
+    "semantic_hash": "85e138b546bf60a4422679aba6e164dc"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\sampleinput\\sampleRFP 1.pdf": {
+    "mtime": 1778763814.3992245,
+    "ast_hash": "c6b67b1c5a7fa24461d3a34f26797e06",
+    "semantic_hash": "c6b67b1c5a7fa24461d3a34f26797e06"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\ey-logo.png": {
+    "mtime": 1774249048.9018874,
+    "ast_hash": "1896047f764d6ac7a260731375b75887",
+    "semantic_hash": "1896047f764d6ac7a260731375b75887"
+  },
+  "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\ey-logo.svg": {
+    "mtime": 1774249048.9058914,
+    "ast_hash": "0aef3099514e2f9ddf3168bb263fd62d",
+    "semantic_hash": "0aef3099514e2f9ddf3168bb263fd62d"
+  }
+}

@@ -1,0 +1,3728 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "h_web_generation_flow",
+        "nodes": [
+          "n_static_index_html",
+          "n_app_py",
+          "n_src_pipeline_py",
+          "n_src_generate_pptx_py"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\index.html",
+        "source_location": "L547,L596,L642"
+      },
+      {
+        "id": "h_cli_mapping_flow",
+        "nodes": [
+          "n_src_main_py",
+          "n_src_extract_template_py",
+          "n_src_map_sections_py",
+          "n_output_debug_mapping_json"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\main.py",
+        "source_location": "L77,L87,L204"
+      },
+      {
+        "id": "h_sample_rfp_trace",
+        "nodes": [
+          "n_samplerfp1_pdf",
+          "n_output_run_log_txt",
+          "n_output_run_log2_txt",
+          "n_output_run_log3_txt",
+          "n_output_run_log4_txt"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log.txt",
+        "source_location": "L2"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "id": "app_py",
+      "community": 5,
+      "norm_label": "app.py"
+    },
+    {
+      "label": "index()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L26",
+      "id": "proposalassistant_app_index",
+      "community": 5,
+      "norm_label": "index()"
+    },
+    {
+      "label": "serve_static()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L31",
+      "id": "proposalassistant_app_serve_static",
+      "community": 5,
+      "norm_label": "serve_static()"
+    },
+    {
+      "label": "list_templates()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L38",
+      "id": "proposalassistant_app_list_templates",
+      "community": 5,
+      "norm_label": "list_templates()"
+    },
+    {
+      "label": "generate()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L47",
+      "id": "proposalassistant_app_generate",
+      "community": 5,
+      "norm_label": "generate()"
+    },
+    {
+      "label": "download()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L107",
+      "id": "proposalassistant_app_download",
+      "community": 5,
+      "norm_label": "download()"
+    },
+    {
+      "label": "customize()",
+      "file_type": "code",
+      "source_file": "app.py",
+      "source_location": "L123",
+      "id": "proposalassistant_app_customize",
+      "community": 5,
+      "norm_label": "customize()"
+    },
+    {
+      "label": "Flask web application for Proposal Assist.",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "id": "proposalassistant_app_rationale_1",
+      "community": 5,
+      "norm_label": "flask web application for proposal assist."
+    },
+    {
+      "label": "Return available base templates from datalake/.",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L39",
+      "id": "proposalassistant_app_rationale_39",
+      "community": 5,
+      "norm_label": "return available base templates from datalake/."
+    },
+    {
+      "label": "Accept RFP + template choice, run pipeline, return result.",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L48",
+      "id": "proposalassistant_app_rationale_48",
+      "community": 5,
+      "norm_label": "accept rfp + template choice, run pipeline, return result."
+    },
+    {
+      "label": "Download the generated PPTX file.",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L108",
+      "id": "proposalassistant_app_rationale_108",
+      "community": 5,
+      "norm_label": "download the generated pptx file."
+    },
+    {
+      "label": "Re-run pipeline with customization instructions (placeholder for POC).",
+      "file_type": "rationale",
+      "source_file": "app.py",
+      "source_location": "L124",
+      "id": "proposalassistant_app_rationale_124",
+      "community": 5,
+      "norm_label": "re-run pipeline with customization instructions (placeholder for poc)."
+    },
+    {
+      "label": "debug_mapping.json",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L1",
+      "id": "output_debug_mapping_json",
+      "community": 7,
+      "norm_label": "debug_mapping.json"
+    },
+    {
+      "label": "rfp_sections",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L2",
+      "id": "output_debug_mapping_rfp_sections",
+      "community": 7,
+      "norm_label": "rfp_sections"
+    },
+    {
+      "label": "template_slides",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L142",
+      "id": "output_debug_mapping_template_slides",
+      "community": 7,
+      "norm_label": "template_slides"
+    },
+    {
+      "label": "mapping",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L328",
+      "id": "output_debug_mapping_mapping",
+      "community": 7,
+      "norm_label": "mapping"
+    },
+    {
+      "label": "mappings",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L329",
+      "id": "output_debug_mapping_mapping_mappings",
+      "community": 7,
+      "norm_label": "mappings"
+    },
+    {
+      "label": "new_slides_needed",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L478",
+      "id": "output_debug_mapping_mapping_new_slides_needed",
+      "community": 7,
+      "norm_label": "new_slides_needed"
+    },
+    {
+      "label": "slides_to_keep_original",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L486",
+      "id": "output_debug_mapping_mapping_slides_to_keep_original",
+      "community": 7,
+      "norm_label": "slides_to_keep_original"
+    },
+    {
+      "label": "notes",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L498",
+      "id": "output_debug_mapping_mapping_notes",
+      "community": 7,
+      "norm_label": "notes"
+    },
+    {
+      "label": "adapted_keys",
+      "file_type": "code",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L500",
+      "id": "output_debug_mapping_adapted_keys",
+      "community": 7,
+      "norm_label": "adapted_keys"
+    },
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "src/config.py",
+      "source_location": "L1",
+      "id": "src_config_py",
+      "community": 4,
+      "norm_label": "config.py"
+    },
+    {
+      "label": "load_config()",
+      "file_type": "code",
+      "source_file": "src/config.py",
+      "source_location": "L8",
+      "id": "src_config_load_config",
+      "community": 4,
+      "norm_label": "load_config()"
+    },
+    {
+      "label": "extract_rfp.py",
+      "file_type": "code",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L1",
+      "id": "src_extract_rfp_py",
+      "community": 8,
+      "norm_label": "extract_rfp.py"
+    },
+    {
+      "label": "extract_rfp_text()",
+      "file_type": "code",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L5",
+      "id": "src_extract_rfp_extract_rfp_text",
+      "community": 4,
+      "norm_label": "extract_rfp_text()"
+    },
+    {
+      "label": "analyze_rfp()",
+      "file_type": "code",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L47",
+      "id": "src_extract_rfp_analyze_rfp",
+      "community": 8,
+      "norm_label": "analyze_rfp()"
+    },
+    {
+      "label": "_build_knowledge_base()",
+      "file_type": "code",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L102",
+      "id": "src_extract_rfp_build_knowledge_base",
+      "community": 8,
+      "norm_label": "_build_knowledge_base()"
+    },
+    {
+      "label": "_chunk_text()",
+      "file_type": "code",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L128",
+      "id": "src_extract_rfp_chunk_text",
+      "community": 8,
+      "norm_label": "_chunk_text()"
+    },
+    {
+      "label": "_create_rfp_summary()",
+      "file_type": "code",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L164",
+      "id": "src_extract_rfp_create_rfp_summary",
+      "community": 8,
+      "norm_label": "_create_rfp_summary()"
+    },
+    {
+      "label": "Extract key facts and create a knowledge base from the RFP.",
+      "file_type": "rationale",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L48",
+      "id": "src_extract_rfp_rationale_48",
+      "community": 8,
+      "norm_label": "extract key facts and create a knowledge base from the rfp."
+    },
+    {
+      "label": "extract_template.py",
+      "file_type": "code",
+      "source_file": "src/extract_template.py",
+      "source_location": "L1",
+      "id": "src_extract_template_py",
+      "community": 4,
+      "norm_label": "extract_template.py"
+    },
+    {
+      "label": "extract_template_structure()",
+      "file_type": "code",
+      "source_file": "src/extract_template.py",
+      "source_location": "L5",
+      "id": "src_extract_template_extract_template_structure",
+      "community": 4,
+      "norm_label": "extract_template_structure()"
+    },
+    {
+      "label": "_collect_slide_info()",
+      "file_type": "code",
+      "source_file": "src/extract_template.py",
+      "source_location": "L12",
+      "id": "src_extract_template_collect_slide_info",
+      "community": 4,
+      "norm_label": "_collect_slide_info()"
+    },
+    {
+      "label": "_classify_slides_with_llm()",
+      "file_type": "code",
+      "source_file": "src/extract_template.py",
+      "source_location": "L96",
+      "id": "src_extract_template_classify_slides_with_llm",
+      "community": 4,
+      "norm_label": "_classify_slides_with_llm()"
+    },
+    {
+      "label": "generate_pptx.py",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L1",
+      "id": "src_generate_pptx_py",
+      "community": 1,
+      "norm_label": "generate_pptx.py"
+    },
+    {
+      "label": "generate_pptx_from_enrichments()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L19",
+      "id": "src_generate_pptx_generate_pptx_from_enrichments",
+      "community": 1,
+      "norm_label": "generate_pptx_from_enrichments()"
+    },
+    {
+      "label": "_replace_placeholders_globally()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L77",
+      "id": "src_generate_pptx_replace_placeholders_globally",
+      "community": 1,
+      "norm_label": "_replace_placeholders_globally()"
+    },
+    {
+      "label": "_replace_in_shapes()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L88",
+      "id": "src_generate_pptx_replace_in_shapes",
+      "community": 1,
+      "norm_label": "_replace_in_shapes()"
+    },
+    {
+      "label": "_replace_placeholders_in_textframe()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L108",
+      "id": "src_generate_pptx_replace_placeholders_in_textframe",
+      "community": 1,
+      "norm_label": "_replace_placeholders_in_textframe()"
+    },
+    {
+      "label": "_apply_content_to_slide()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L166",
+      "id": "src_generate_pptx_apply_content_to_slide",
+      "community": 1,
+      "norm_label": "_apply_content_to_slide()"
+    },
+    {
+      "label": "_find_title_shape()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L215",
+      "id": "src_generate_pptx_find_title_shape",
+      "community": 1,
+      "norm_label": "_find_title_shape()"
+    },
+    {
+      "label": "_find_shape_by_name()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L228",
+      "id": "src_generate_pptx_find_shape_by_name",
+      "community": 1,
+      "norm_label": "_find_shape_by_name()"
+    },
+    {
+      "label": "_is_skip_shape()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L251",
+      "id": "src_generate_pptx_is_skip_shape",
+      "community": 1,
+      "norm_label": "_is_skip_shape()"
+    },
+    {
+      "label": "_replace_text_preserving_format()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L261",
+      "id": "src_generate_pptx_replace_text_preserving_format",
+      "community": 1,
+      "norm_label": "_replace_text_preserving_format()"
+    },
+    {
+      "label": "_duplicate_slide()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L328",
+      "id": "src_generate_pptx_duplicate_slide",
+      "community": 1,
+      "norm_label": "_duplicate_slide()"
+    },
+    {
+      "label": "_remap_rids()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L384",
+      "id": "src_generate_pptx_remap_rids",
+      "community": 1,
+      "norm_label": "_remap_rids()"
+    },
+    {
+      "label": "_sanitize()",
+      "file_type": "code",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L395",
+      "id": "src_generate_pptx_sanitize",
+      "community": 1,
+      "norm_label": "_sanitize()"
+    },
+    {
+      "label": "Clone the template and apply:     1. Global placeholder replacement ([CLIENT], [",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L25",
+      "id": "src_generate_pptx_rationale_25",
+      "community": 1,
+      "norm_label": "clone the template and apply:     1. global placeholder replacement ([client], ["
+    },
+    {
+      "label": "Replace [CLIENT], [COMPANY], etc. in ALL text across ALL slides, including group",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L78",
+      "id": "src_generate_pptx_rationale_78",
+      "community": 1,
+      "norm_label": "replace [client], [company], etc. in all text across all slides, including group"
+    },
+    {
+      "label": "Recursively replace placeholders in shapes, including group children.",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L89",
+      "id": "src_generate_pptx_rationale_89",
+      "community": 1,
+      "norm_label": "recursively replace placeholders in shapes, including group children."
+    },
+    {
+      "label": "Replace placeholders in a text frame, handling cross-run splits.          PPTX X",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L109",
+      "id": "src_generate_pptx_rationale_109",
+      "community": 1,
+      "norm_label": "replace placeholders in a text frame, handling cross-run splits.          pptx x"
+    },
+    {
+      "label": "Apply enriched content to a slide with robust shape matching.",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L167",
+      "id": "src_generate_pptx_rationale_167",
+      "community": 1,
+      "norm_label": "apply enriched content to a slide with robust shape matching."
+    },
+    {
+      "label": "Find the title shape on a slide.",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L216",
+      "id": "src_generate_pptx_rationale_216",
+      "community": 1,
+      "norm_label": "find the title shape on a slide."
+    },
+    {
+      "label": "Find shape by name, handling disambiguated names like 'Content Placeholder 8 #3'",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L229",
+      "id": "src_generate_pptx_rationale_229",
+      "community": 1,
+      "norm_label": "find shape by name, handling disambiguated names like 'content placeholder 8 #3'"
+    },
+    {
+      "label": "Replace text while preserving fonts, colors, sizes, bullets.",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L262",
+      "id": "src_generate_pptx_rationale_262",
+      "community": 1,
+      "norm_label": "replace text while preserving fonts, colors, sizes, bullets."
+    },
+    {
+      "label": "Duplicate a slide preserving all shapes, images, and relationships.",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L329",
+      "id": "src_generate_pptx_rationale_329",
+      "community": 1,
+      "norm_label": "duplicate a slide preserving all shapes, images, and relationships."
+    },
+    {
+      "label": "Remove control characters that are invalid in XML.",
+      "file_type": "rationale",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L396",
+      "id": "src_generate_pptx_rationale_396",
+      "community": 1,
+      "norm_label": "remove control characters that are invalid in xml."
+    },
+    {
+      "label": "knowledge_base.py",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L1",
+      "id": "src_knowledge_base_py",
+      "community": 0,
+      "norm_label": "knowledge_base.py"
+    },
+    {
+      "label": "SimpleHashEmbedding",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L17",
+      "id": "src_knowledge_base_simplehashembedding",
+      "community": 0,
+      "norm_label": "simplehashembedding"
+    },
+    {
+      "label": "EmbeddingFunction",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "embeddingfunction",
+      "community": 0,
+      "norm_label": "embeddingfunction"
+    },
+    {
+      "label": ".__call__()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L20",
+      "id": "src_knowledge_base_simplehashembedding_call",
+      "community": 0,
+      "norm_label": ".__call__()"
+    },
+    {
+      "label": "classify_section()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L63",
+      "id": "src_knowledge_base_classify_section",
+      "community": 0,
+      "norm_label": "classify_section()"
+    },
+    {
+      "label": "detect_sector()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L73",
+      "id": "src_knowledge_base_detect_sector",
+      "community": 0,
+      "norm_label": "detect_sector()"
+    },
+    {
+      "label": "KnowledgeBase",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L90",
+      "id": "src_knowledge_base_knowledgebase",
+      "community": 0,
+      "norm_label": "knowledgebase"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L93",
+      "id": "src_knowledge_base_knowledgebase_init",
+      "community": 0,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".index_all_templates()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L103",
+      "id": "src_knowledge_base_knowledgebase_index_all_templates",
+      "community": 0,
+      "norm_label": ".index_all_templates()"
+    },
+    {
+      "label": "._index_template()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L117",
+      "id": "src_knowledge_base_knowledgebase_index_template",
+      "community": 0,
+      "norm_label": "._index_template()"
+    },
+    {
+      "label": ".query()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L196",
+      "id": "src_knowledge_base_knowledgebase_query",
+      "community": 0,
+      "norm_label": ".query()"
+    },
+    {
+      "label": ".get_sector_experience()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L247",
+      "id": "src_knowledge_base_knowledgebase_get_sector_experience",
+      "community": 0,
+      "norm_label": ".get_sector_experience()"
+    },
+    {
+      "label": ".get_sector_methodology()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L256",
+      "id": "src_knowledge_base_knowledgebase_get_sector_methodology",
+      "community": 0,
+      "norm_label": ".get_sector_methodology()"
+    },
+    {
+      "label": ".get_closest_sector_content()",
+      "file_type": "code",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L265",
+      "id": "src_knowledge_base_knowledgebase_get_closest_sector_content",
+      "community": 0,
+      "norm_label": ".get_closest_sector_content()"
+    },
+    {
+      "label": "Knowledge Base: indexes all PPTX templates into ChromaDB for retrieval.  Hierarc",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L1",
+      "id": "src_knowledge_base_rationale_1",
+      "community": 0,
+      "norm_label": "knowledge base: indexes all pptx templates into chromadb for retrieval.  hierarc"
+    },
+    {
+      "label": "Lightweight local embedding \u2014 no model download needed.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L18",
+      "id": "src_knowledge_base_rationale_18",
+      "community": 0,
+      "norm_label": "lightweight local embedding \u2014 no model download needed."
+    },
+    {
+      "label": "Classify a slide into a section type based on its text.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L64",
+      "id": "src_knowledge_base_rationale_64",
+      "community": 0,
+      "norm_label": "classify a slide into a section type based on its text."
+    },
+    {
+      "label": "Detect the sector of a template from its filename and content.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L74",
+      "id": "src_knowledge_base_rationale_74",
+      "community": 0,
+      "norm_label": "detect the sector of a template from its filename and content."
+    },
+    {
+      "label": "ChromaDB-backed knowledge base for template content.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L91",
+      "id": "src_knowledge_base_rationale_91",
+      "community": 0,
+      "norm_label": "chromadb-backed knowledge base for template content."
+    },
+    {
+      "label": "Parse and index all PPTX files in the datalake.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L104",
+      "id": "src_knowledge_base_rationale_104",
+      "community": 0,
+      "norm_label": "parse and index all pptx files in the datalake."
+    },
+    {
+      "label": "Query the knowledge base with optional sector/section filtering.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L203",
+      "id": "src_knowledge_base_rationale_203",
+      "community": 0,
+      "norm_label": "query the knowledge base with optional sector/section filtering."
+    },
+    {
+      "label": "Get all experience/credential slides for a given sector.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L248",
+      "id": "src_knowledge_base_rationale_248",
+      "community": 0,
+      "norm_label": "get all experience/credential slides for a given sector."
+    },
+    {
+      "label": "Get methodology/approach slides for a given sector.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L257",
+      "id": "src_knowledge_base_rationale_257",
+      "community": 0,
+      "norm_label": "get methodology/approach slides for a given sector."
+    },
+    {
+      "label": "Try exact sector match first, then fall back to any sector.",
+      "file_type": "rationale",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L268",
+      "id": "src_knowledge_base_rationale_268",
+      "community": 0,
+      "norm_label": "try exact sector match first, then fall back to any sector."
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "src/main.py",
+      "source_location": "L1",
+      "id": "src_main_py",
+      "community": 4,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "list_files()",
+      "file_type": "code",
+      "source_file": "src/main.py",
+      "source_location": "L13",
+      "id": "src_main_list_files",
+      "community": 4,
+      "norm_label": "list_files()"
+    },
+    {
+      "label": "pick_option()",
+      "file_type": "code",
+      "source_file": "src/main.py",
+      "source_location": "L21",
+      "id": "src_main_pick_option",
+      "community": 4,
+      "norm_label": "pick_option()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/main.py",
+      "source_location": "L35",
+      "id": "src_main_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "map_sections.py",
+      "file_type": "code",
+      "source_file": "src/map_sections.py",
+      "source_location": "L1",
+      "id": "src_map_sections_py",
+      "community": 4,
+      "norm_label": "map_sections.py"
+    },
+    {
+      "label": "map_sections()",
+      "file_type": "code",
+      "source_file": "src/map_sections.py",
+      "source_location": "L48",
+      "id": "src_map_sections_map_sections",
+      "community": 4,
+      "norm_label": "map_sections()"
+    },
+    {
+      "label": "adapt_content_for_slides()",
+      "file_type": "code",
+      "source_file": "src/map_sections.py",
+      "source_location": "L148",
+      "id": "src_map_sections_adapt_content_for_slides",
+      "community": 4,
+      "norm_label": "adapt_content_for_slides()"
+    },
+    {
+      "label": "pipeline.py",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L1",
+      "id": "src_pipeline_py",
+      "community": 6,
+      "norm_label": "pipeline.py"
+    },
+    {
+      "label": "_get_kb()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L18",
+      "id": "src_pipeline_get_kb",
+      "community": 6,
+      "norm_label": "_get_kb()"
+    },
+    {
+      "label": "run_pipeline()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L27",
+      "id": "src_pipeline_run_pipeline",
+      "community": 6,
+      "norm_label": "run_pipeline()"
+    },
+    {
+      "label": "_slide_agent()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L205",
+      "id": "src_pipeline_slide_agent",
+      "community": 6,
+      "norm_label": "_slide_agent()"
+    },
+    {
+      "label": "_format_rfp_summary()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L274",
+      "id": "src_pipeline_format_rfp_summary",
+      "community": 6,
+      "norm_label": "_format_rfp_summary()"
+    },
+    {
+      "label": "_extract_template_slides()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L292",
+      "id": "src_pipeline_extract_template_slides",
+      "community": 6,
+      "norm_label": "_extract_template_slides()"
+    },
+    {
+      "label": "_extract_template_slides_from_prs()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L332",
+      "id": "src_pipeline_extract_template_slides_from_prs",
+      "community": 6,
+      "norm_label": "_extract_template_slides_from_prs()"
+    },
+    {
+      "label": "_build_slide_outline_from_list()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L351",
+      "id": "src_pipeline_build_slide_outline_from_list",
+      "community": 6,
+      "norm_label": "_build_slide_outline_from_list()"
+    },
+    {
+      "label": "_build_slide_outline()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L362",
+      "id": "src_pipeline_build_slide_outline",
+      "community": 6,
+      "norm_label": "_build_slide_outline()"
+    },
+    {
+      "label": "_compute_qa()",
+      "file_type": "code",
+      "source_file": "src/pipeline.py",
+      "source_location": "L373",
+      "id": "src_pipeline_compute_qa",
+      "community": 6,
+      "norm_label": "_compute_qa()"
+    },
+    {
+      "label": "Agentic pipeline with Knowledge Base retrieval and RFP summary.",
+      "file_type": "rationale",
+      "source_file": "src/pipeline.py",
+      "source_location": "L1",
+      "id": "src_pipeline_rationale_1",
+      "community": 6,
+      "norm_label": "agentic pipeline with knowledge base retrieval and rfp summary."
+    },
+    {
+      "label": "Extract slide info from an already-open Presentation object.",
+      "file_type": "rationale",
+      "source_file": "src/pipeline.py",
+      "source_location": "L333",
+      "id": "src_pipeline_rationale_333",
+      "community": 6,
+      "norm_label": "extract slide info from an already-open presentation object."
+    },
+    {
+      "label": "verifier.py",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L1",
+      "id": "src_verifier_py",
+      "community": 2,
+      "norm_label": "verifier.py"
+    },
+    {
+      "label": "verify_and_fix()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L30",
+      "id": "src_verifier_verify_and_fix",
+      "community": 2,
+      "norm_label": "verify_and_fix()"
+    },
+    {
+      "label": "_enforce_layout()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L86",
+      "id": "src_verifier_enforce_layout",
+      "community": 2,
+      "norm_label": "_enforce_layout()"
+    },
+    {
+      "label": "_get_dominant_font_size()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L121",
+      "id": "src_verifier_get_dominant_font_size",
+      "community": 2,
+      "norm_label": "_get_dominant_font_size()"
+    },
+    {
+      "label": "_estimate_max_chars_per_line()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L135",
+      "id": "src_verifier_estimate_max_chars_per_line",
+      "community": 2,
+      "norm_label": "_estimate_max_chars_per_line()"
+    },
+    {
+      "label": "_estimate_max_lines()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L142",
+      "id": "src_verifier_estimate_max_lines",
+      "community": 2,
+      "norm_label": "_estimate_max_lines()"
+    },
+    {
+      "label": "_fix_title_overflow()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L149",
+      "id": "src_verifier_fix_title_overflow",
+      "community": 2,
+      "norm_label": "_fix_title_overflow()"
+    },
+    {
+      "label": "_fix_body_overflow()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L168",
+      "id": "src_verifier_fix_body_overflow",
+      "community": 2,
+      "norm_label": "_fix_body_overflow()"
+    },
+    {
+      "label": "_verify_content()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L239",
+      "id": "src_verifier_verify_content",
+      "community": 2,
+      "norm_label": "_verify_content()"
+    },
+    {
+      "label": "_curate_slides()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L345",
+      "id": "src_verifier_curate_slides",
+      "community": 2,
+      "norm_label": "_curate_slides()"
+    },
+    {
+      "label": "_delete_slide()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L404",
+      "id": "src_verifier_delete_slide",
+      "community": 2,
+      "norm_label": "_delete_slide()"
+    },
+    {
+      "label": "_replace_text_in_frame()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L429",
+      "id": "src_verifier_replace_text_in_frame",
+      "community": 2,
+      "norm_label": "_replace_text_in_frame()"
+    },
+    {
+      "label": "_sanitize()",
+      "file_type": "code",
+      "source_file": "src/verifier.py",
+      "source_location": "L481",
+      "id": "src_verifier_sanitize",
+      "community": 2,
+      "norm_label": "_sanitize()"
+    },
+    {
+      "label": "Verifier Agent: post-generation quality pass.  1. Content Verification  \u2014 LLM ch",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L1",
+      "id": "src_verifier_rationale_1",
+      "community": 2,
+      "norm_label": "verifier agent: post-generation quality pass.  1. content verification  \u2014 llm ch"
+    },
+    {
+      "label": "Run all verification passes on the generated PPTX. Modifies in place.",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L38",
+      "id": "src_verifier_rationale_38",
+      "community": 2,
+      "norm_label": "run all verification passes on the generated pptx. modifies in place."
+    },
+    {
+      "label": "Get the most common font size in a text frame (in points).",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L122",
+      "id": "src_verifier_rationale_122",
+      "community": 2,
+      "norm_label": "get the most common font size in a text frame (in points)."
+    },
+    {
+      "label": "Estimate max characters per line given shape width and font size.",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L136",
+      "id": "src_verifier_rationale_136",
+      "community": 2,
+      "norm_label": "estimate max characters per line given shape width and font size."
+    },
+    {
+      "label": "Estimate max lines that fit in a shape given its height and font size.",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L143",
+      "id": "src_verifier_rationale_143",
+      "community": 2,
+      "norm_label": "estimate max lines that fit in a shape given its height and font size."
+    },
+    {
+      "label": "Ensure title fits in 1-2 lines. Truncate if needed.",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L150",
+      "id": "src_verifier_rationale_150",
+      "community": 2,
+      "norm_label": "ensure title fits in 1-2 lines. truncate if needed."
+    },
+    {
+      "label": "Ensure body text fits within the shape bounds. Trim excess lines.",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L169",
+      "id": "src_verifier_rationale_169",
+      "community": 2,
+      "norm_label": "ensure body text fits within the shape bounds. trim excess lines."
+    },
+    {
+      "label": "Delete a slide by index from the presentation.",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L405",
+      "id": "src_verifier_rationale_405",
+      "community": 2,
+      "norm_label": "delete a slide by index from the presentation."
+    },
+    {
+      "label": "Replace all text in a text frame preserving formatting of first paragraph.",
+      "file_type": "rationale",
+      "source_file": "src/verifier.py",
+      "source_location": "L430",
+      "id": "src_verifier_rationale_430",
+      "community": 2,
+      "norm_label": "replace all text in a text frame preserving formatting of first paragraph."
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "src/__init__.py",
+      "source_location": "L1",
+      "id": "src_init_py",
+      "community": 11,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "Flask API entrypoint",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/app.py",
+      "source_location": "L1-L169",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_app_py",
+      "community": 3,
+      "norm_label": "flask api entrypoint"
+    },
+    {
+      "label": "Debug mapping artifact",
+      "file_type": "document",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/debug_mapping.json",
+      "source_location": "L1-L507",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_output_debug_mapping_json",
+      "community": 3,
+      "norm_label": "debug mapping artifact"
+    },
+    {
+      "label": "Pipeline run log #1",
+      "file_type": "document",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log.txt",
+      "source_location": "L1-L157",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_output_run_log_txt",
+      "community": 3,
+      "norm_label": "pipeline run log #1"
+    },
+    {
+      "label": "Pipeline run log #2 (with traceback)",
+      "file_type": "document",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log2.txt",
+      "source_location": "L1-L247",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_output_run_log2_txt",
+      "community": 3,
+      "norm_label": "pipeline run log #2 (with traceback)"
+    },
+    {
+      "label": "Pipeline run log #3",
+      "file_type": "document",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log3.txt",
+      "source_location": "L1-L299",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_output_run_log3_txt",
+      "community": 3,
+      "norm_label": "pipeline run log #3"
+    },
+    {
+      "label": "Pipeline run log #4",
+      "file_type": "document",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log4.txt",
+      "source_location": "L1-L335",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_output_run_log4_txt",
+      "community": 3,
+      "norm_label": "pipeline run log #4"
+    },
+    {
+      "label": "Proposal generation prompt specification",
+      "file_type": "rationale",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/prompt.md",
+      "source_location": "L1-L128",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_prompt_md",
+      "community": 3,
+      "norm_label": "proposal generation prompt specification"
+    },
+    {
+      "label": "Python dependency manifest",
+      "file_type": "document",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/requirements.txt",
+      "source_location": "L1-L8",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_requirements_txt",
+      "community": 3,
+      "norm_label": "python dependency manifest"
+    },
+    {
+      "label": "RFP for Onboarding Digital Agency",
+      "file_type": "paper",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/sampleinput/RFP for Onboarding Digital Agency.pdf",
+      "source_location": "pages 1-5",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_rfp_onboarding_pdf",
+      "community": 3,
+      "norm_label": "rfp for onboarding digital agency"
+    },
+    {
+      "label": "Sample PPP RFP document",
+      "file_type": "paper",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/sampleinput/sampleRFP 1.pdf",
+      "source_location": "pages 1-97",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_samplerfp1_pdf",
+      "community": 3,
+      "norm_label": "sample ppp rfp document"
+    },
+    {
+      "label": "Runtime configuration loader",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/config.py",
+      "source_location": "L1-L32",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_config_py",
+      "community": 3,
+      "norm_label": "runtime configuration loader"
+    },
+    {
+      "label": "RFP extraction and summarization",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/extract_rfp.py",
+      "source_location": "L1-L179",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_extract_rfp_py",
+      "community": 3,
+      "norm_label": "rfp extraction and summarization"
+    },
+    {
+      "label": "Template structure extraction",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/extract_template.py",
+      "source_location": "L1-L157",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_extract_template_py",
+      "community": 3,
+      "norm_label": "template structure extraction"
+    },
+    {
+      "label": "PPTX generation and text replacement",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/generate_pptx.py",
+      "source_location": "L1-L399",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_generate_pptx_py",
+      "community": 3,
+      "norm_label": "pptx generation and text replacement"
+    },
+    {
+      "label": "ChromaDB-backed template knowledge base",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/knowledge_base.py",
+      "source_location": "L1-L270",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_knowledge_base_py",
+      "community": 3,
+      "norm_label": "chromadb-backed template knowledge base"
+    },
+    {
+      "label": "CLI orchestrator pipeline",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/main.py",
+      "source_location": "L1-L242",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_main_py",
+      "community": 3,
+      "norm_label": "cli orchestrator pipeline"
+    },
+    {
+      "label": "Section mapping and content adaptation",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/map_sections.py",
+      "source_location": "L1-L206",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_map_sections_py",
+      "community": 3,
+      "norm_label": "section mapping and content adaptation"
+    },
+    {
+      "label": "Agentic enrichment pipeline",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/pipeline.py",
+      "source_location": "L1-L390",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_pipeline_py",
+      "community": 3,
+      "norm_label": "agentic enrichment pipeline"
+    },
+    {
+      "label": "Post-generation verifier and fixer",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/verifier.py",
+      "source_location": "L1-L485",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_verifier_py",
+      "community": 3,
+      "norm_label": "post-generation verifier and fixer"
+    },
+    {
+      "label": "Package initializer",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/__init__.py",
+      "source_location": "empty_file",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_src_init_py",
+      "community": 12,
+      "norm_label": "package initializer"
+    },
+    {
+      "label": "Frontend UI for proposal workflow",
+      "file_type": "code",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/index.html",
+      "source_location": "L1-L709",
+      "source_url": null,
+      "captured_at": "2026-05-15T23:10:00Z",
+      "author": null,
+      "contributor": null,
+      "id": "n_static_index_html",
+      "community": 3,
+      "norm_label": "frontend ui for proposal workflow"
+    },
+    {
+      "label": "ey-logo.png",
+      "file_type": "image",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.png",
+      "source_location": "image_full",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "static_ey_logo_png",
+      "community": 10,
+      "norm_label": "ey-logo.png"
+    },
+    {
+      "label": "Yellow triangular wedge above wordmark",
+      "file_type": "image",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.png",
+      "source_location": "image_region:upper_center",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "static_ey_logo_yellow_wedge",
+      "community": 10,
+      "norm_label": "yellow triangular wedge above wordmark"
+    },
+    {
+      "label": "EY white wordmark",
+      "file_type": "image",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.png",
+      "source_location": "image_region:lower_center",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "static_ey_logo_wordmark_ey",
+      "community": 10,
+      "norm_label": "ey white wordmark"
+    },
+    {
+      "label": "Dark charcoal background",
+      "file_type": "image",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.png",
+      "source_location": "image_region:full_background",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "static_ey_logo_dark_background",
+      "community": 10,
+      "norm_label": "dark charcoal background"
+    },
+    {
+      "label": "EY logo (SVG)",
+      "type": "logo",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "file_type": "image",
+      "id": "ey_logo_svg",
+      "community": 9,
+      "norm_label": "ey logo (svg)"
+    },
+    {
+      "label": "Left white mark",
+      "type": "polyline",
+      "color": "#FFFFFE",
+      "source_id": "Fill-1",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "file_type": "image",
+      "id": "ey_left_white_mark",
+      "community": 9,
+      "norm_label": "left white mark"
+    },
+    {
+      "label": "Right white mark",
+      "type": "polyline",
+      "color": "#FFFFFE",
+      "source_id": "Fill-2",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "file_type": "image",
+      "id": "ey_right_white_mark",
+      "community": 9,
+      "norm_label": "right white mark"
+    },
+    {
+      "label": "Yellow beam",
+      "type": "polyline",
+      "color": "#FBD020",
+      "source_id": "Fill-4",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "file_type": "image",
+      "id": "ey_yellow_beam",
+      "community": 9,
+      "norm_label": "yellow beam"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "proposalassistant_app_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "proposalassistant_app_serve_static",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "proposalassistant_app_list_templates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "proposalassistant_app_generate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "proposalassistant_app_download",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "app_py",
+      "target": "proposalassistant_app_customize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "proposalassistant_app_rationale_1",
+      "target": "app_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "proposalassistant_app_rationale_39",
+      "target": "proposalassistant_app_list_templates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "proposalassistant_app_rationale_48",
+      "target": "proposalassistant_app_generate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "proposalassistant_app_generate",
+      "target": "src_pipeline_run_pipeline"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "proposalassistant_app_rationale_108",
+      "target": "proposalassistant_app_download",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "app.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "proposalassistant_app_rationale_124",
+      "target": "proposalassistant_app_customize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "output_debug_mapping_json",
+      "target": "output_debug_mapping_rfp_sections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "output_debug_mapping_json",
+      "target": "output_debug_mapping_template_slides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L328",
+      "weight": 1.0,
+      "source": "output_debug_mapping_json",
+      "target": "output_debug_mapping_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L500",
+      "weight": 1.0,
+      "source": "output_debug_mapping_json",
+      "target": "output_debug_mapping_adapted_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L329",
+      "weight": 1.0,
+      "source": "output_debug_mapping_mapping",
+      "target": "output_debug_mapping_mapping_mappings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L478",
+      "weight": 1.0,
+      "source": "output_debug_mapping_mapping",
+      "target": "output_debug_mapping_mapping_new_slides_needed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L486",
+      "weight": 1.0,
+      "source": "output_debug_mapping_mapping",
+      "target": "output_debug_mapping_mapping_slides_to_keep_original",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "output/debug_mapping.json",
+      "source_location": "L498",
+      "weight": 1.0,
+      "source": "output_debug_mapping_mapping",
+      "target": "output_debug_mapping_mapping_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/config.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_config_py",
+      "target": "src_config_load_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_config_load_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_extract_rfp_py",
+      "target": "src_extract_rfp_extract_rfp_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "src_extract_rfp_py",
+      "target": "src_extract_rfp_analyze_rfp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "src_extract_rfp_py",
+      "target": "src_extract_rfp_build_knowledge_base",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "src_extract_rfp_py",
+      "target": "src_extract_rfp_chunk_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "src_extract_rfp_py",
+      "target": "src_extract_rfp_create_rfp_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_extract_rfp_extract_rfp_text"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/pipeline.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_extract_rfp_extract_rfp_text"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "src_extract_rfp_analyze_rfp",
+      "target": "src_extract_rfp_build_knowledge_base",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "src_extract_rfp_analyze_rfp",
+      "target": "src_extract_rfp_create_rfp_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "src_extract_rfp_rationale_48",
+      "target": "src_extract_rfp_analyze_rfp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/pipeline.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_extract_rfp_analyze_rfp"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_rfp.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "src_extract_rfp_build_knowledge_base",
+      "target": "src_extract_rfp_chunk_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_template.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_extract_template_py",
+      "target": "src_extract_template_extract_template_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_template.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_extract_template_py",
+      "target": "src_extract_template_collect_slide_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_template.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "src_extract_template_py",
+      "target": "src_extract_template_classify_slides_with_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_template.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_extract_template_extract_template_structure",
+      "target": "src_extract_template_collect_slide_info",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/extract_template.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_extract_template_extract_template_structure",
+      "target": "src_extract_template_classify_slides_with_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_extract_template_extract_template_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_generate_pptx_from_enrichments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_replace_placeholders_globally",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_replace_in_shapes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_replace_placeholders_in_textframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_apply_content_to_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_find_title_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L228",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_find_shape_by_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_is_skip_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L261",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_replace_text_preserving_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L328",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_duplicate_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_remap_rids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L395",
+      "weight": 1.0,
+      "source": "src_generate_pptx_py",
+      "target": "src_generate_pptx_sanitize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "src_generate_pptx_generate_pptx_from_enrichments",
+      "target": "src_generate_pptx_find_shape_by_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "src_generate_pptx_generate_pptx_from_enrichments",
+      "target": "src_generate_pptx_replace_text_preserving_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_generate_pptx_generate_pptx_from_enrichments",
+      "target": "src_generate_pptx_replace_placeholders_globally",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_25",
+      "target": "src_generate_pptx_generate_pptx_from_enrichments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/pipeline.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_generate_pptx_generate_pptx_from_enrichments"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "src_generate_pptx_replace_placeholders_globally",
+      "target": "src_generate_pptx_replace_in_shapes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_78",
+      "target": "src_generate_pptx_replace_placeholders_globally",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "src_generate_pptx_replace_in_shapes",
+      "target": "src_generate_pptx_replace_placeholders_in_textframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_89",
+      "target": "src_generate_pptx_replace_in_shapes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "src_generate_pptx_replace_placeholders_in_textframe",
+      "target": "src_generate_pptx_sanitize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_109",
+      "target": "src_generate_pptx_replace_placeholders_in_textframe",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "src_generate_pptx_apply_content_to_slide",
+      "target": "src_generate_pptx_find_title_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "src_generate_pptx_apply_content_to_slide",
+      "target": "src_generate_pptx_replace_text_preserving_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "src_generate_pptx_apply_content_to_slide",
+      "target": "src_generate_pptx_find_shape_by_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "src_generate_pptx_apply_content_to_slide",
+      "target": "src_generate_pptx_is_skip_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_167",
+      "target": "src_generate_pptx_apply_content_to_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "src_generate_pptx_find_title_shape",
+      "target": "src_generate_pptx_is_skip_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_216",
+      "target": "src_generate_pptx_find_title_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_229",
+      "target": "src_generate_pptx_find_shape_by_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L316",
+      "weight": 1.0,
+      "source": "src_generate_pptx_replace_text_preserving_format",
+      "target": "src_generate_pptx_sanitize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L262",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_262",
+      "target": "src_generate_pptx_replace_text_preserving_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L378",
+      "weight": 1.0,
+      "source": "src_generate_pptx_duplicate_slide",
+      "target": "src_generate_pptx_remap_rids",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L329",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_329",
+      "target": "src_generate_pptx_duplicate_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/generate_pptx.py",
+      "source_location": "L396",
+      "weight": 1.0,
+      "source": "src_generate_pptx_rationale_396",
+      "target": "src_generate_pptx_sanitize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_knowledge_base_py",
+      "target": "src_knowledge_base_simplehashembedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "src_knowledge_base_py",
+      "target": "src_knowledge_base_classify_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "src_knowledge_base_py",
+      "target": "src_knowledge_base_detect_sector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "src_knowledge_base_py",
+      "target": "src_knowledge_base_knowledgebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_1",
+      "target": "src_knowledge_base_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_knowledge_base_simplehashembedding",
+      "target": "embeddingfunction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_knowledge_base_simplehashembedding",
+      "target": "src_knowledge_base_simplehashembedding_call",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase_init",
+      "target": "src_knowledge_base_simplehashembedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_18",
+      "target": "src_knowledge_base_simplehashembedding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase_index_template",
+      "target": "src_knowledge_base_classify_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_64",
+      "target": "src_knowledge_base_classify_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/pipeline.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_knowledge_base_classify_section"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/verifier.py",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "src_verifier_verify_content",
+      "target": "src_knowledge_base_classify_section"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/verifier.py",
+      "source_location": "L353",
+      "weight": 1.0,
+      "source": "src_verifier_curate_slides",
+      "target": "src_knowledge_base_classify_section"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase_index_template",
+      "target": "src_knowledge_base_detect_sector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_74",
+      "target": "src_knowledge_base_detect_sector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase",
+      "target": "src_knowledge_base_knowledgebase_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase",
+      "target": "src_knowledge_base_knowledgebase_index_all_templates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase",
+      "target": "src_knowledge_base_knowledgebase_index_template",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase",
+      "target": "src_knowledge_base_knowledgebase_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase",
+      "target": "src_knowledge_base_knowledgebase_get_sector_experience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L256",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase",
+      "target": "src_knowledge_base_knowledgebase_get_sector_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase",
+      "target": "src_knowledge_base_knowledgebase_get_closest_sector_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_91",
+      "target": "src_knowledge_base_knowledgebase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/pipeline.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_pipeline_get_kb",
+      "target": "src_knowledge_base_knowledgebase"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase_index_all_templates",
+      "target": "src_knowledge_base_knowledgebase_index_template",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_104",
+      "target": "src_knowledge_base_knowledgebase_index_all_templates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase_get_sector_experience",
+      "target": "src_knowledge_base_knowledgebase_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase_get_sector_methodology",
+      "target": "src_knowledge_base_knowledgebase_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "src_knowledge_base_knowledgebase_get_closest_sector_content",
+      "target": "src_knowledge_base_knowledgebase_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L203",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_203",
+      "target": "src_knowledge_base_knowledgebase_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_248",
+      "target": "src_knowledge_base_knowledgebase_get_sector_experience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_257",
+      "target": "src_knowledge_base_knowledgebase_get_sector_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/knowledge_base.py",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "src_knowledge_base_rationale_268",
+      "target": "src_knowledge_base_knowledgebase_get_closest_sector_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_main_py",
+      "target": "src_main_list_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_main_py",
+      "target": "src_main_pick_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "src_main_py",
+      "target": "src_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_main_list_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_main_pick_option",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_map_sections_map_sections"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "src_main_main",
+      "target": "src_map_sections_adapt_content_for_slides"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/map_sections.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "src_map_sections_py",
+      "target": "src_map_sections_map_sections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/map_sections.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "src_map_sections_py",
+      "target": "src_map_sections_adapt_content_for_slides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_get_kb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_run_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_slide_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L274",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_format_rfp_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L292",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_extract_template_slides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_extract_template_slides_from_prs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L351",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_build_slide_outline_from_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L362",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_build_slide_outline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L373",
+      "weight": 1.0,
+      "source": "src_pipeline_py",
+      "target": "src_pipeline_compute_qa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_pipeline_rationale_1",
+      "target": "src_pipeline_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_pipeline_get_kb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_pipeline_format_rfp_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_pipeline_extract_template_slides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_pipeline_slide_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_pipeline_extract_template_slides_from_prs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_pipeline_build_slide_outline_from_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_pipeline_compute_qa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/pipeline.py",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "src_pipeline_run_pipeline",
+      "target": "src_verifier_verify_and_fix"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pipeline.py",
+      "source_location": "L333",
+      "weight": 1.0,
+      "source": "src_pipeline_rationale_333",
+      "target": "src_pipeline_extract_template_slides_from_prs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_verify_and_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_enforce_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_get_dominant_font_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_estimate_max_chars_per_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_estimate_max_lines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_fix_title_overflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_fix_body_overflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_verify_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L345",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_curate_slides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L404",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_delete_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_replace_text_in_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L481",
+      "weight": 1.0,
+      "source": "src_verifier_py",
+      "target": "src_verifier_sanitize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_1",
+      "target": "src_verifier_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_verifier_verify_and_fix",
+      "target": "src_verifier_enforce_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "src_verifier_verify_and_fix",
+      "target": "src_verifier_verify_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "src_verifier_verify_and_fix",
+      "target": "src_verifier_curate_slides",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_38",
+      "target": "src_verifier_verify_and_fix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "src_verifier_enforce_layout",
+      "target": "src_verifier_get_dominant_font_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "src_verifier_enforce_layout",
+      "target": "src_verifier_fix_title_overflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "src_verifier_enforce_layout",
+      "target": "src_verifier_fix_body_overflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_122",
+      "target": "src_verifier_get_dominant_font_size",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "src_verifier_fix_title_overflow",
+      "target": "src_verifier_estimate_max_chars_per_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "src_verifier_fix_body_overflow",
+      "target": "src_verifier_estimate_max_chars_per_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_136",
+      "target": "src_verifier_estimate_max_chars_per_line",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L152",
+      "weight": 1.0,
+      "source": "src_verifier_fix_title_overflow",
+      "target": "src_verifier_estimate_max_lines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "src_verifier_fix_body_overflow",
+      "target": "src_verifier_estimate_max_lines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_143",
+      "target": "src_verifier_estimate_max_lines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "src_verifier_fix_title_overflow",
+      "target": "src_verifier_replace_text_in_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_150",
+      "target": "src_verifier_fix_title_overflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "src_verifier_fix_body_overflow",
+      "target": "src_verifier_replace_text_in_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_169",
+      "target": "src_verifier_fix_body_overflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "src_verifier_verify_content",
+      "target": "src_verifier_replace_text_in_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L394",
+      "weight": 1.0,
+      "source": "src_verifier_curate_slides",
+      "target": "src_verifier_delete_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L405",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_405",
+      "target": "src_verifier_delete_slide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L475",
+      "weight": 1.0,
+      "source": "src_verifier_replace_text_in_frame",
+      "target": "src_verifier_sanitize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/verifier.py",
+      "source_location": "L430",
+      "weight": 1.0,
+      "source": "src_verifier_rationale_430",
+      "target": "src_verifier_replace_text_in_frame",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/app.py",
+      "source_location": "L13,L17",
+      "weight": 1.0,
+      "source": "n_app_py",
+      "target": "n_src_config_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/app.py",
+      "source_location": "L14,L70",
+      "weight": 1.0,
+      "source": "n_app_py",
+      "target": "n_src_pipeline_py"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/index.html",
+      "source_location": "L547,L596,L642,L660",
+      "weight": 1.0,
+      "source": "n_static_index_html",
+      "target": "n_app_py"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/requirements.txt",
+      "source_location": "L6",
+      "weight": 0.9,
+      "source": "n_requirements_txt",
+      "target": "n_app_py"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/main.py",
+      "source_location": "L204-L205",
+      "weight": 1.0,
+      "source": "n_src_main_py",
+      "target": "n_output_debug_mapping_json"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.91,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/debug_mapping.json",
+      "source_location": "L328-L500",
+      "weight": 0.9,
+      "source": "n_output_debug_mapping_json",
+      "target": "n_src_map_sections_py"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.84,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/debug_mapping.json",
+      "source_location": "L2-L141",
+      "weight": 0.8,
+      "source": "n_output_debug_mapping_json",
+      "target": "n_samplerfp1_pdf"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log.txt",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "n_output_run_log_txt",
+      "target": "n_samplerfp1_pdf"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log2.txt",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "n_output_run_log2_txt",
+      "target": "n_samplerfp1_pdf"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log2.txt",
+      "source_location": "L241-L247",
+      "weight": 1.0,
+      "source": "n_output_run_log2_txt",
+      "target": "n_src_generate_pptx_py"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log3.txt",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "n_output_run_log3_txt",
+      "target": "n_samplerfp1_pdf"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/output/run_log4.txt",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "n_output_run_log4_txt",
+      "target": "n_samplerfp1_pdf"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.64,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/prompt.md",
+      "source_location": "L1-L128",
+      "weight": 0.6,
+      "source": "n_prompt_md",
+      "target": "n_src_map_sections_py"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.93,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/requirements.txt",
+      "source_location": "L2-L3",
+      "weight": 0.9,
+      "source": "n_requirements_txt",
+      "target": "n_src_extract_rfp_py"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.92,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/requirements.txt",
+      "source_location": "L7-L8",
+      "weight": 0.9,
+      "source": "n_requirements_txt",
+      "target": "n_src_knowledge_base_py"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.78,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/sampleinput/RFP for Onboarding Digital Agency.pdf",
+      "source_location": "pages 1-5",
+      "weight": 0.8,
+      "source": "n_rfp_onboarding_pdf",
+      "target": "n_src_extract_rfp_py"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.86,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/sampleinput/sampleRFP 1.pdf",
+      "source_location": "pages 2-97",
+      "weight": 0.9,
+      "source": "n_samplerfp1_pdf",
+      "target": "n_src_extract_rfp_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.43,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/main.py",
+      "source_location": "L7,L67",
+      "weight": 0.6,
+      "source": "n_src_main_py",
+      "target": "n_src_extract_rfp_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/pipeline.py",
+      "source_location": "L9,L44-L45",
+      "weight": 1.0,
+      "source": "n_src_pipeline_py",
+      "target": "n_src_extract_rfp_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/main.py",
+      "source_location": "L8,L77",
+      "weight": 1.0,
+      "source": "n_src_main_py",
+      "target": "n_src_extract_template_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.48,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/main.py",
+      "source_location": "L10,L188",
+      "weight": 0.7,
+      "source": "n_src_main_py",
+      "target": "n_src_generate_pptx_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/pipeline.py",
+      "source_location": "L11,L119",
+      "weight": 1.0,
+      "source": "n_src_pipeline_py",
+      "target": "n_src_generate_pptx_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/pipeline.py",
+      "source_location": "L10,L22-L23,L81,L84,L127",
+      "weight": 1.0,
+      "source": "n_src_pipeline_py",
+      "target": "n_src_knowledge_base_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/verifier.py",
+      "source_location": "L16,L262,L360",
+      "weight": 1.0,
+      "source": "n_src_verifier_py",
+      "target": "n_src_knowledge_base_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/main.py",
+      "source_location": "L9,L87,L146",
+      "weight": 1.0,
+      "source": "n_src_main_py",
+      "target": "n_src_map_sections_py"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.74,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/main.py",
+      "source_location": "L35-L223",
+      "weight": 0.7,
+      "source": "n_src_main_py",
+      "target": "n_src_pipeline_py"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/src/pipeline.py",
+      "source_location": "L12,L132",
+      "weight": 1.0,
+      "source": "n_src_pipeline_py",
+      "target": "n_src_verifier_py"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.png",
+      "source_location": "image_region:upper_center",
+      "weight": 1.0,
+      "source": "static_ey_logo_png",
+      "target": "static_ey_logo_yellow_wedge"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.png",
+      "source_location": "image_region:lower_center",
+      "weight": 1.0,
+      "source": "static_ey_logo_png",
+      "target": "static_ey_logo_wordmark_ey"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.png",
+      "source_location": "image_region:full_background",
+      "weight": 1.0,
+      "source": "static_ey_logo_png",
+      "target": "static_ey_logo_dark_background"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence_score": 1.0,
+      "confidence": "EXTRACTED",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ey_logo_svg",
+      "target": "ey_left_white_mark"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence_score": 1.0,
+      "confidence": "EXTRACTED",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ey_logo_svg",
+      "target": "ey_right_white_mark"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence_score": 1.0,
+      "confidence": "EXTRACTED",
+      "source_file": "C:/Users/MP946KB/WORKDIR/Proposal-assist/ProposalAssistant/static/ey-logo.svg",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ey_logo_svg",
+      "target": "ey_yellow_beam"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "h_web_generation_flow",
+      "nodes": [
+        "n_static_index_html",
+        "n_app_py",
+        "n_src_pipeline_py",
+        "n_src_generate_pptx_py"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\static\\index.html",
+      "source_location": "L547,L596,L642"
+    },
+    {
+      "id": "h_cli_mapping_flow",
+      "nodes": [
+        "n_src_main_py",
+        "n_src_extract_template_py",
+        "n_src_map_sections_py",
+        "n_output_debug_mapping_json"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\src\\main.py",
+      "source_location": "L77,L87,L204"
+    },
+    {
+      "id": "h_sample_rfp_trace",
+      "nodes": [
+        "n_samplerfp1_pdf",
+        "n_output_run_log_txt",
+        "n_output_run_log2_txt",
+        "n_output_run_log3_txt",
+        "n_output_run_log4_txt"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\MP946KB\\WORKDIR\\Proposal-assist\\ProposalAssistant\\output\\run_log.txt",
+      "source_location": "L2"
+    }
+  ],
+  "built_at_commit": "c71bd08ad8163e2e337b44d89572a7b53eb50ad4"
+}

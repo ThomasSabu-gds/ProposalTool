@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="561px" height="574px" viewBox="0 0 561 574" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>EY_Logo_Beam_White_Yellow_C_CMYK</title>
+    <defs>
+        <polygon id="path-1" points="0.06 0.974 560.394 0.974 560.394 574 0.06 574"></polygon>
+    </defs>
+    <g id="EY_Logo_Beam_White_Yellow_C_CMYK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polyline id="Fill-1" fill="#FFFFFE" points="89.916 462.031 192.417 462.031 192.417 402.511 89.916 402.511 89.916 355.734 203.304 355.734 165.685 290.537 4.903 290.537 4.903 574 231.667 574 231.667 508.803 89.916 508.803 89.916 462.031"></polyline>
+        <g id="Group-5">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-3"></g>
+            <polyline id="Fill-2" fill="#FFFFFE" mask="url(#mask-2)" points="382.589 290.537 334.439 383.042 286.405 290.537 192.411 290.537 291.452 462.031 291.452 574 376.206 574 376.206 462.031 475.378 290.537 382.589 290.537"></polyline>
+            <polyline id="Fill-4" fill="#FBD020" mask="url(#mask-2)" points="560.394 0.974 0 205.505 560.394 106.511 560.394 0.974"></polyline>
+        </g>
+    </g>
+</svg>
